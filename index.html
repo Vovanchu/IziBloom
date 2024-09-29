@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Репетиторство Онлайн</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">IziBloom</div>
+
+      <nav id="navbar" class="hidden">
+        <a href="#learning-directions">Напрямки</a>
+        <a href="#free-lesson">Пробний урок</a>
+        <a href="#prices">Вартість</a>
+      </nav>
+
+      <div class="phone">
+        <a href="tel:+380672903393"> 
+            <span class="phone-icon">
+            <img src="/img/phone.svg" alt="phone-icon" />
+            </span>067 290 33 93
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </header>
+
+    <section class="language-section">
+        <div class="content">
+            <div class="language-content">
+                <h1>Англійська мова </h1> <h1>для всіх</h1>
+                <p>Досягай найкращих результатів з нами</p>
+                <p>Ваша англійська буде розцвітати, адже Bloom — цвісти</p>
+                <p>Англійська — це цікаво, весело та продуктивно!</p>
+            </div>
+    
+            <div class="buttons">
+                <div class="btn">Для діток</div>
+                <img src="/img/children-icon.svg" alt="Діти сміються" class="image"/>
+                <div class="btn">Для дорослих</div>
+            </div>
+        </div>
+    </section>    
+
+    <section id="free-lesson" class="free-lesson"> 
+      <div class="text-container">
+          <h1>Безкоштовний урок</h1>
+          <p>Пробне безкоштовне заняття 30 хв для знайомства</p>
+          <p>з викладачем та обговорення всіх деталей</p>
+      </div>
+      
+      <div class="button-container">
+          <a href="javascript:void(0);" class="button" onclick="openModal('search')">Записатися на пробний урок</a>
+      </div>
+  
+      <div class="image-container">
+          <img src="img/free_lesson/communications-removebg-preview.png" alt="Communications Icon" class="icon-1">
+          <img src="img/free_lesson/free_communication-removebg-preview.png" alt="Free Communication Icon" class="icon-2">
+          <img src="img/free_lesson/friendly-removebg-preview.png" alt="Friendly Icon" class="icon-3">
+          <img src="img/free_lesson/grow_up-removebg-preview.png" alt="Grow Up Icon" class="icon-4">
+          <img src="img/free_lesson/interaction-removebg-preview.png" alt="Interaction Icon" class="icon-5">
+      </div>
+    </section>
+  
+    <section id="learning-directions" class="learning-directions">
+      <h1>Різні напрямки навчання</h1>
+      <div class="learning-grid">
+        <div class="learning-item">
+          <img src="/img/areas/for_beginner.svg" alt="Навчання з 0">
+          <div class="learning-text">
+            <h3>Для початківців: навчання з 0</h3>
+            <p>Ти опануєш основи граматики</p>
+            <p>й розшириш свій словниковий запас</p>
+          </div>
+        </div>
+        <div class="learning-item">
+          <img src="/img/areas/for_schoolboy.svg" alt="Для школярів">
+          <div class="learning-text">
+            <h3>Для школярів: допомога з домашнім завданням</h3>
+            <p>Домашнє завдання простіше й зрозуміліше з нами!</p>
+            <p>Ми допоможемо зі шкільною програмою.</p>
+          </div>
+        </div>
+        <div class="learning-item">
+          <img src="/img/areas/for_child.svg" alt="Навчання з іграми">
+          <div class="learning-text">
+            <h3>Для діток: цікаве навчання з іграми</h3>
+            <p>Вивчайте нові знання через гру і радість.</p>
+            <p>Дітки захоплюються й не відволікаються.</p>
+          </div>
+        </div>
+        <div class="learning-item">
+          <img src="/img/areas/for_addult.svg" alt="Для дорослих">
+          <div class="learning-text">
+            <h3>Для дорослих: продуктивне та цікаве навчання</h3>
+            <p>Практикуй мовлення, слухання, читання та граматику.</p>
+            <p>Зробіть свій професійний шлях ще цікавішим!</p>
+          </div>
+        </div>
+        <div class="learning-item">
+          <img src="/img/areas/NMT.svg" alt="НМТ/ЗНО">
+          <div class="learning-text">
+            <h3>НМТ / ЗНО: підготовка з успіхом</h3>
+            <p>Підготовка, яка відкриває двері</p>
+            <p>до вищої освіти.</p>
+          </div>
+        </div>
+        <div class="learning-item">
+          <img src="/img/areas/english.svg" alt="Загальна англійська">
+          <div class="learning-text">
+            <h3>Загальна англійська: корисний розвиток</h3>
+            <p>Вдосконалюй свій рівень, покращуй граматику, долай мовний бар'єр</p>
+            <p>та зможеш спілкуватися на будь-які теми.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="prices" class="pricing-section">
+      <div class="pricing-header">
+          <h2>Вартість уроків</h2>
+          <div class="price-box">
+              <span class="price">300</span> <span class="currency">грн</span><span class="per-lesson"> за урок</span>
+          </div>
+      </div>
+      <div class="pricing-info">
+          <p><strong>Попередня оплата:</strong><br>Оплата проводиться наперед до початку занять.</p>
+          <p>Ви можете обрати зручний для вас варіант оплати:</p>
+          <ul>
+              <li>Оплата кожного уроку окремо: Ви сплачуєте 300 грн за кожен урок до його початку.</li>
+              <li>Або Ви маєте можливість оплатити одразу кілька уроків.</li>
+          </ul>
+      </div>
+    </section>
+    
+
+    <section class="advantages-section">
+      <div class="container">
+          <h2>Наші переваги</h2>
+          <p>Вивчення англійської мови онлайн – це зручно та цікаво! Індивідуальні уроки допоможуть швидше подолати страх спілкування та отримати знання в комфортній атмосфері.</p>
+          <p>Зосередившись на своїх інтересах і потребах, ви швидко досягнете значних результатів. У нашій школі індивідуальний підхід допоможе вам розвиватися у власному темпі.</p>
+          <p>Не витрачайте час — оберіть ідеальну атмосферу для навчання, де підтримка викладача зробить процес вивчення ефективнішим і приємнішим! Розпочніть свою мовну подорож вже сьогодні!</p>
+          
+          <div class="advantages-grid">
+              <div class="advantage-item">
+                  <img src="icon1.png" alt="Інтерактивні матеріали">
+                  <h3>Інтерактивні матеріали</h3>
+                  <ul>
+                      <li>відео</li>
+                      <li>аудіо</li>
+                      <li>ігри</li>
+                  </ul>
+                  <p>(дітки краще сприймають матеріал в ігровій формі)</p>
+              </div>
+              <div class="advantage-item">
+                  <img src="icon2.png" alt="Покращення">
+                  <h3>Покращення</h3>
+                  <ul>
+                      <li>граматики</li>
+                      <li>говоріння</li>
+                      <li>сприйняття на слух</li>
+                      <li>читання</li>
+                  </ul>
+              </div>
+              <div class="advantage-item">
+                  <img src="icon3.png" alt="Підбір матеріалів індивідуально">
+                  <h3>Підбір матеріалів індивідуально</h3>
+                  <ul>
+                      <li>вчимося за нашими матеріалами</li>
+                      <li>вчимося за вашими підручниками</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <a href="javascript:void(0);" class="button" onclick="openModal('become')">Хочу стати Репетитором</a>
+    </section>
+
+
+    <!-- Modal Structure for "Шукаю Репетитора" -->
+    <div id="searchModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span
+          class="close"
+          onclick="document.getElementById('searchModal').style.display='none'"
+          >&times;</span
+        >
+        <h2>Знайди свого Репетитора</h2>
+        <!-- Форма для шукаючих репетитора -->
+        <form id="searchForm">
+          <label for="searchName">Ваше ім'я:</label>
+          <input
+            type="text"
+            id="searchName"
+            name="name"
+            placeholder="Введіть ваше ім'я "
+            required
+          />
+
+          <label for="searchPhone">Телефон:</label>
+          <input
+            type="tel"
+            id="searchPhone"
+            name="phone"
+            placeholder="Введіть номер телефону"
+            required
+          />
+
+          <label for="searchAge">Вік:</label>
+          <input
+            type="text"
+            id="searchAge"
+            name="age"
+            placeholder="Введіть вік"
+            required
+          />
+
+          <label for="subject">Предмет, яким хочете займатися:</label>
+          <select id="subject" name="subject" required>
+            <option value="">Оберіть предмет</option>
+            <option value="математика">Математика</option>
+            <option value="англійська мова">Англійська мова</option>
+            <option value="німецька мова">Німецька мова</option>
+          </select>
+
+          <label for="level">Рівень знань:</label>
+          <select id="level" name="level" required>
+            <option value="">Оберіть рівень</option>
+            <option value="початківець">Початківець</option>
+            <option value="середній">Середній</option>
+            <option value="достатній">Достатній</option>
+          </select>
+
+          <input type="hidden" name="form_type" value="search_tutor" />
+          <!-- Поле для визначення форми -->
+
+          <button type="submit">Надіслати</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Structure for "Хочу стати Репетитором" -->
+    <div id="becomeModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span
+          class="close"
+          onclick="document.getElementById('becomeModal').style.display='none'"
+          >&times;</span
+        >
+        <h2>Залиште заявку для того, щоб стати репетитором</h2>
+
+        <!-- Форма для тих, хто хоче стати репетитором -->
+        <form id="becomeForm">
+          <label for="becomeName">Ваше ім'я:</label>
+          <input
+            type="text"
+            id="becomeName"
+            name="name"
+            placeholder="Введіть ваше ім'я "
+            required
+          />
+
+          <label for="becomePhone">Телефон:</label>
+          <input
+            type="tel"
+            id="becomePhone"
+            name="phone"
+            placeholder="Введіть номер телефону"
+            required
+          />
+
+          <label for="becomeSubject">Предмет, який ви викладаєте:</label>
+          <input
+            type="text"
+            id="becomeSubject"
+            name="subject"
+            placeholder="Введіть що хочете викладати"
+            required
+          />
+
+          <input type="hidden" name="form_type" value="become_tutor" />
+          <!-- Поле для визначення форми -->
+
+          <button type="submit">Надіслати</button>
+        </form>
+      </div>
+    </div>
+
+
+    <footer id="contact">
+      <p>Контактна інформація: +380501234567, email: info@tutorservice.ua</p>
+    </footer>
+
+    <!-- Підключення JavaScript файлу -->
+    <script src="/js/main.js"></script>
+    <script src="/js/tg_host.js"></script>
+  </body>
+</html>

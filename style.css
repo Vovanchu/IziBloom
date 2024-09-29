@@ -1,0 +1,742 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/*СТИЛІ ДЛЯ ГОЛОВА*/ 
+header {
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання всіх елементів справа */
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    position: absolute; /* Додаємо, щоб розмістити логотип зліва */
+    left: 20px; /* Вирівнювання зліва */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    color: #000;
+    margin-left: 20px; /* Додаємо відступ між навігацією та телефоном */
+}
+
+.phone-icon img {
+    width: 1.7rem;  
+    height: auto;
+}
+
+.phone a {
+    text-decoration: none;
+    color: #000;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hamburger div {
+    background-color: #000;
+    height: 4px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active {
+    transform: rotate(0deg);
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none; /* Ховати навігацію за замовчуванням */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    nav.hidden {
+        display: flex;
+    }
+
+    .hamburger {
+        font-size: 1.2rem;
+        display: block; /* Відображаємо на малих екранах */
+        margin-left: 20px; /* Відступ зліва для хамбургера */
+    }
+
+    .phone {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .phone a { 
+        display: flex;
+        align-items: center;
+    }
+
+    .phone a span { 
+        margin-right: 10px;
+    }
+
+    .phone a::after { 
+        content: ""; /* Приховуємо цифри телефону */
+        display: none;
+    }
+
+    .phone a {
+        justify-content: center; /* Центруємо іконку на мобільних пристроях */
+        font-size: 0; /* Прибираємо цифри, не порушуючи структури посилання */
+    }
+
+    .phone a span {
+        display: inline-block; /* Іконка залишається */
+    }
+
+    .phone a span img {
+        width: 24px; /* Розмір SVG іконки */
+        height: auto;
+    }
+}
+
+/*СТИЛІ ДЛЯ АНГЛІЙСЬКА ДЛЯ ВСІХ*/
+.language-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #4b4e7e;
+    border-radius: 20px;
+    color: #fff;
+    margin: 100px auto 20px;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.language-section .content {
+    display: flex; /* Flex для горизонтального вирівнювання */
+    justify-content: space-between; /* Вирівнюємо контент */
+    align-items: center;
+    width: 100%; /* Ширина 100% для вмісту */
+    max-width: 800px;
+    margin-left: 0; /* Прибираємо негативний margin для адаптації */
+}
+
+.language-section .language-content {
+    max-width: 80%; /* Збільшуємо ширину контенту до 80% */
+    flex: 1; /* Забирає весь доступний простір */
+}
+
+.language-section .buttons {
+    display: flex;
+    flex-direction: row; /* Горизонтальне вирівнювання кнопок */
+    gap: 20px;
+    width: 50%; /* Збільшено ширину контейнера кнопок */
+    justify-content: center; /* Центруємо кнопки в контейнері */
+}
+
+.language-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.language-section p {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.language-section .btn {
+    padding: 15px 30px;
+    width: 150px;
+    background-color: #f5ead7;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Застосування margin для переміщення кнопок */
+.language-section .btn:first-child {
+    padding: 30px 30px;
+}
+
+.language-section .btn:last-child {
+    margin-top: 0; /* Прибираємо негативний margin */
+}
+
+.language-section .btn:hover {
+    background-color: #d5d5d5;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
+}
+
+.buttons .image img {
+    width: 150px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .language-section h1 {
+        font-size: 2rem; /* Зменшуємо шрифт заголовка */
+    }
+
+    .language-section p {
+        font-size: 1rem; /* Зменшуємо шрифт тексту */
+    }
+
+    .language-section .btn {
+        width: 120px; /* Зменшуємо ширину кнопок на середніх екранах */
+        font-size: 1.2rem; /* Зменшуємо шрифт кнопок */
+    }
+
+    .language-section .buttons {
+        width: 70%; /* Зменшуємо ширину контейнера кнопок */
+    }
+}
+
+@media (max-width: 768px) {
+    .language-section .content {
+        flex-direction: column; /* Вертикальне вирівнювання на малих екранах */
+        align-items: flex-start; /* Вирівнюємо контент по лівому краю */
+    }
+
+    .language-section .buttons {
+        flex-direction: column; /* Вертикальне вирівнювання кнопок */
+        width: 100%; /* Ширина на 100% для кнопок */
+        justify-content: flex-start; /* Вирівнюємо кнопки ліворуч */
+    }
+
+    .language-section h1 {
+        font-size: 1.8rem; /* Зменшуємо шрифт заголовка */
+    }
+
+    .language-section p {
+        font-size: 0.9rem; /* Зменшуємо шрифт тексту */
+    }
+
+    .language-section .btn {
+        width: 100%; /* Збільшуємо ширину кнопок до 100% */
+        margin-bottom: 10px; /* Додаємо відстань між кнопками */
+    }
+}
+
+@media (max-width: 480px) {
+    .language-section h1 {
+        font-size: 1.5rem; /* Додаткове зменшення шрифту заголовка */
+    }
+
+    .language-section p {
+        font-size: 0.8rem; /* Додаткове зменшення шрифту тексту */
+    }
+
+    .language-section .btn {
+        padding: 10px 20px; /* Зменшуємо padding кнопок */
+        font-size: 1rem; /* Зменшуємо шрифт кнопок */
+    }
+}
+
+/*СТИЛІ ДЛЯ БЕЗКОШТОВНОГО НАВЧАННЯ*/
+.free-lesson {
+    position: relative; /* Відносне позиціонування для контейнера */
+    padding: 40px;
+    background-color: rgba(255, 241, 236, 1);
+    border-radius: 20px;
+    color: #333;
+    margin: 100px auto 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between; /* Вирівнювання між блоками тексту і кнопки */
+    align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.free-lesson h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.free-lesson p {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+
+/* Контейнер для тексту */
+.text-container {
+    max-width: 60%; /* Обмеження ширини текстового контейнера */
+}
+
+/* Контейнер для кнопки */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання кнопки праворуч */
+    width: 40%; /* Встановлення ширини для контейнера */
+}
+
+.free-lesson .button {
+    display: inline-flex; /* Зміна на inline-flex для вирівнювання контенту по центру */
+    justify-content: center; /* Центрування тексту всередині кнопки */
+    align-items: center; /* Центрування вертикально */
+    padding: 20px; /* Внутрішні відступи (збільшені) */
+    background-color: #4b4e7e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px; /* Можна зменшити заокруглення, щоб кнопка була більш квадратною */
+    font-size: 1.5rem; /* Розмір шрифту (можна змінити за потреби) */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Встановіть ширину кнопки */
+    height: 80px; /* Встановіть висоту кнопки */
+    text-align: center; /* Вирівнювання тексту всередині кнопки */
+    line-height: 1.5em;
+    word-spacing: 0.7em;
+}
+
+.free-lesson .button:hover {
+    background-color: #333;
+}
+
+/* Стилі для іконок */
+.free-lesson .image-container img {
+    position: absolute;
+    width: 80px;
+    height: auto;
+}
+
+/* Позиціонування іконок */
+.icon-1 { bottom: -20%; right: 5%;}
+.icon-2 { top: -15%; left: -50px; }
+.icon-3 { bottom: 50%; right: -80px; }
+.icon-4 { bottom: -20%; left: -50px; }
+.icon-5 { top:-25%; right: 15em;}
+
+/*Адаптація Безкоштовного уроку*/
+@media (max-width: 768px) {
+    .free-lesson {
+        flex-direction: column; /* Вертикальне вирівнювання */
+        align-items: center; /* Центрування по горизонталі */
+    }
+
+    .button-container {
+        width: 100%; /* Кнопка займатиме всю ширину */
+        margin-top: 20px; /* Відступ зверху для кнопки */
+    }
+
+    .free-lesson .image-container {
+        display: none; /* Сховати іконки на малих екранах */
+    }
+
+    .free-lesson .button {
+        width: 100%; /* Кнопка займатиме всю ширину */
+    }
+}
+
+/*СТИЛІ ДЛЯ РІЗНІ НАПРЯМКИ*/
+.learning-directions {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.learning-directions h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.learning-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    text-align: left;
+}
+
+.learning-item img {
+    width: 130px; /* Збільшений розмір зображення */
+    height: 130px;
+    margin-right: 15px; /* Трохи менший відступ між картинкою і текстом */
+}
+
+.learning-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.learning-text h3 {
+    font-size: 25px; /* Зменшений розмір заголовка */
+    margin-bottom: 5px; /* Менша відстань між h3 і p */
+    color: #333;
+}
+
+.learning-text p {
+    font-size: 15px; /* Зменшений розмір тексту в параграфі */
+    color: #666;
+    margin: 0; /* Відсутність додаткових відступів для параграфа */
+}
+
+/* Media queries для мобільних пристроїв */
+@media (max-width: 768px) {
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .learning-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .learning-item img {
+        margin-bottom: 10px; /* Менший відступ між картинкою і текстом на мобільних */
+        margin-right: 0;
+        width: 80px; /* Збільшений розмір зображення для мобільних */
+        height: 80px;
+    }
+    
+    .learning-text {
+        align-items: center;
+    }
+}
+
+/*СТИЛІ ДЛЯ ВАРТІСТЬ*/
+.pricing-section {
+    background-color: rgba(238, 239, 245, 1); /* Світло-синій відтінок для фону секції */
+    padding: 30px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Тінь для секції */
+    width: 100%; /* Робимо ширину контейнера на всю сторінку */
+    box-sizing: border-box;
+}
+
+.pricing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffece5; /* Світло-персиковий відтінок для блоку вартості */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    max-width: 800px; /* Обмежуємо ширину контенту */
+    margin: 0 auto; /* Вирівнюємо по центру */
+}
+
+.pricing-header h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #333;
+    font-weight:bolder;
+}
+
+.price-box {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.price-box .price {
+    font-size: 48px;
+    color: #333;
+}
+
+.price-box .currency {
+    font-size: 24px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.price-box .per-lesson {
+    font-size: 16px;
+    color: #888;
+}
+
+.pricing-info {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    background-color: rgba(238, 239, 245, 1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1200px; /* Обмежуємо ширину контенту */
+    margin: 0 auto; /* Вирівнюємо по центру */
+}
+
+.pricing-info strong {
+    font-weight: bold;
+}
+
+.pricing-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.pricing-info li {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .price-box .price {
+        font-size: 36px;
+    }
+
+    .price-box .currency,
+    .price-box .per-lesson {
+        font-size: 16px;
+    }
+
+    .pricing-header, .pricing-info {
+        padding: 15px;
+    }
+}
+
+
+.advantages-section {
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffe9e5
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.advantages-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.advantage-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.advantage-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.advantage-item ul li {
+    margin-bottom: 10px;
+}
+
+.advantage-item p {
+    font-size: 14px;
+    color: #999;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Адаптивні стилі для модалок */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.modal input, .modal select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
